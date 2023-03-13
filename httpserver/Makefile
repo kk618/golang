@@ -1,6 +1,6 @@
 export tag=v1.0
 root:
-	export ROOT=github.com/cncamp/golang
+	export ROOT=github.com/kk618/golang
 
 build:
 	echo "building httpserver binary"
@@ -9,8 +9,8 @@ build:
 
 release: build
 	echo "building httpserver container"
-	docker build -t cncamp/httpserver:${tag} .
+	docker build -t jennykjr/httpserver:${tag} .
 
 push: release
-	echo "pushing cncamp/httpserver"
-	docker push cncamp/httpserver:v1.0
+	echo "pushing jennykjr/httpserver"
+	docker push jennykjr/httpserver:v1.0
